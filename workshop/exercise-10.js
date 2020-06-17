@@ -8,6 +8,11 @@
 // Otherwise returns false.
 function allLong(lst) {
   // lst is an array of strings
+    let boolArr = lst.map(function (str) {
+      return str.length > 4;
+    });
+
+    return !(boolArr.includes(false));
 }
 // -------------------------------------------------------------------------
 console.log('Q8 - case 1', allLong(['Scott', 'Bob', 'Ric', 'Jim']));

@@ -10,7 +10,14 @@
 // is to be counted (rather than counting only uppercase “B” characters).
 // Rewrite countBs to make use of this new function.
 
-function countChar(str, char) {}
+function countChar(str, char) {
+    let arr = str.split('');
+    let Bs=0;
+    arr.forEach(function (letter) {
+        if(letter === char) Bs++;
+    });
+    return Bs;
+}
 // -------------------------------------------------------------------------
 console.log('Q2: ', countChar('BananaBabyBubbles', 'u'));
 console.log('Q2: ', countChar('BananaBabyBubbles', 'a'));
